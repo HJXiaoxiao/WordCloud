@@ -2,7 +2,7 @@
 from collections import Counter
 from os import path
 import jieba
-jieba.load_userdict(path.join(path.dirname(__file__), r'D:\Python\word_cloud\venv\resource\userdict.txt'))
+jieba.load_userdict(path.join(path.dirname(__file__), r'D:\学习文件\软件\WordCloud\resource\userdict.txt'))
 
 def word_segment(text):
     '''
@@ -14,10 +14,15 @@ def word_segment(text):
     data = []
     for word in jieba_word:
         data.append(word)
-    dataDict = Counter(data)
+    temp = Counter(data)
+    dataDict_temp = sorted(temp.items(),key = lambda x: x[1],reverse=True)
+    dataDict = dict(dataDict_temp)
     with open('resource/count.txt', 'w') as fw:
         for k, v in dataDict.items():
-            fw.write("'%s' 出现：%d次\n" % (k, v))
+            if k == '\r\n':
+                continue
+            else:
+                fw.write("'%s' 出现：%d次\n" % (k, v))
             #fw.write("%s"%dataDict)
 
 
