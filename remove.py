@@ -28,9 +28,12 @@ def out_stopword(seg):
         #print(key)
         #去除停用词，去除单字，去除重复词
         if not(key.strip() in stopword) and (len(key.strip()) > 1):
-            wordlist.append(key)
-            print(key)
-            keyword.write(key+"\n")
+            if key.strip() == '\n':
+                continue
+            else:
+                wordlist.append(key)
+                print(key)
+                keyword.write(key+"\n")
 
     stop.close()
     keyword.close()
