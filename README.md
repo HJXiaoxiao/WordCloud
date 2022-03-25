@@ -30,6 +30,6 @@ plat.py   绘制词云图
 
 运行结果将保存在 images/save.png 处,运行样例如下：
 
-<img src="README.assets/2.png" alt="图片" style="zoom:50%;" />
+<img src="https://github.com/HJXiaoxiao/WordCloud/blob/main/images/save.png?raw=true" alt="图片" style="zoom:50%;" />
 
-<img src="README.assets/covid.png" alt="我的照片" style="zoom: 50%;" />
+<img src="https://github.com/HJXiaoxiao/WordCloud/blob/main/images/COVID-19.png?raw=true" alt="我的照片" style="zoom: 50%;" />
